@@ -24,7 +24,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.VHMain> {
     public MainAdapter(Activity context) {
         this.context = context;
         for (int i = 1; i < 21; i++) {
-            texts.add("Text " + i);
+            texts.add("Text" + i);
         }
     }
 

@@ -58,7 +58,7 @@ public class ContextExmpl extends AppCompatActivity implements View.OnClickListe
                 /*here it's ok to pass either activity or application context,
                  Toast is not attached to window or activity lifecycle */
 
-                Toast.makeText(ContextExmpl.this, "here Pressed...", Toast.LENGTH_LONG).show();
+                Toast.makeText(ContextExmpl.this, "here Pressed.....", Toast.LENGTH_LONG).show();
             }
         });
     }

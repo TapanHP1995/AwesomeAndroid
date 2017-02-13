@@ -52,7 +52,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.VHMain> {
                 // use both test cases for static implementation as well as singleton pattern
 
                 //App.getContext() or App.getInstance()
-                Toast.makeText(context, "TextView " + (holder.getAdapterPosition() + 1) + " clicked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "TextView is" + (holder.getAdapterPosition() + 1) + " clicked", Toast.LENGTH_SHORT).show();
             }
         });
     }

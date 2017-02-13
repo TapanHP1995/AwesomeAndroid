@@ -26,6 +26,8 @@ public class ContextExmpl extends AppCompatActivity implements View.OnClickListe
 
         btFake = (Button) findViewById(R.id.bt_main_fake);
 
+        btFake.setText(getResources().getString(R.string.fake_button));
+
         rvMain = (RecyclerView) findViewById(R.id.rv_main);
         rvMain.setLayoutManager(new LinearLayoutManager(this)); //Here ok to pass this as it's inside activity itself
 
@@ -47,15 +49,16 @@ public class ContextExmpl extends AppCompatActivity implements View.OnClickListe
                 */
 
                 rvMain.setAdapter(new MainAdapter(ContextExmpl.this));
-//                startActivity(new Intent(ContextExmpl.this, MainActivity.class)); //ContextExmpl.this || v.getContext()
-//                /* as activities needs reference to previous activities */
-//
-//                startActivity(new Intent(ContextExmpl.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); //getApplicationContext()
-//
-//                /*here it's ok to pass either activity or application context,
-//                 Toast is not attached to window or activity lifecycle */
-//
-//                Toast.makeText(ContextExmpl.this, "Pressed...", Toast.LENGTH_LONG).show();
+                
+                startActivity(new Intent(ContextExmpl.this, MainActivity.class)); //ContextExmpl.this || v.getContext()
+                /* as activities needs reference to previous activities */
+
+                startActivity(new Intent(ContextExmpl.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)); //getApplicationContext()
+
+                /*here it's ok to pass either activity or application context,
+                 Toast is not attached to window or activity lifecycle */
+
+                Toast.makeText(ContextExmpl.this, "Pressed...", Toast.LENGTH_LONG).show();
             }
         });
     }
